@@ -1,0 +1,7 @@
+Melanoma is a type of skin cancer that develops from melanocytes.
+Risk factors include UV exposure, fair skin, family history, and multiple moles.
+The ABCDE criteria help identify suspicious lesions: Asymmetry, Border irregularity,
+Color variation, Diameter greater than 6mm, and Evolution over time.
+Treatment options include surgical excision, immunotherapy, targeted therapy,
+and radiation. Early detection significantly improves survival rates.
+Dermoscopy is recommended for evaluation of pigmented skin lesions.

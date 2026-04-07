@@ -1,0 +1,23 @@
+# 数据集（太大）
+data/
+
+# 模型权重（太大）
+models/
+*.pth
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+.conda/
+
+# 环境
+.env
+*.egg-info/
+
+# 结果（可选择上传）
+results/
+
+# 系统文件
+.DS_Store
+Thumbs.db

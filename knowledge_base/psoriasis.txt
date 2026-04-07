@@ -1,0 +1,7 @@
+Psoriasis is a chronic autoimmune condition that causes rapid skin cell buildup.
+It results in scaling on the skin surface with inflammation and redness around scales.
+Common types include plaque psoriasis, guttate, inverse, pustular, and erythrodermic.
+Triggers include stress, infections, certain medications, and skin injuries.
+Treatment options range from topical corticosteroids and vitamin D analogues
+to phototherapy, methotrexate, cyclosporine, and biologic agents targeting
+TNF-alpha, IL-17, and IL-23 pathways.
