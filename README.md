@@ -10,33 +10,33 @@
 ## 技术架构
 
 用户输入（图像 + 症状文字）
-↓
-┌───────────────────────────────┐
-│  图像编码器（ResNet-50 + CNN） │  ← PyTorch + torchvision
-│  文本编码器（Clinical-BERT）   │  ← HuggingFace Transformers
-└───────────────┬───────────────┘
-↓
-Cross-Attention 融合模块      ← 多模态特征对齐（创新点）
-↓
-RAG 检索增强生成层           ← LangChain + FAISS
-（医学知识库 + 诊断学教材）
-↓
-大语言模型生成诊断建议        ← Ollama + Qwen2.5
-↓
-诊断报告输出
+↓  
+┌───────────────────────────────┐  
+│  图像编码器（ResNet-50 + CNN） │  ← PyTorch + torchvision  
+│  文本编码器（Clinical-BERT）   │  ← HuggingFace Transformers  
+└───────────────┬───────────────┘  
+↓  
+Cross-Attention 融合模块      ← 多模态特征对齐（创新点）  
+↓  
+RAG 检索增强生成层           ← LangChain + FAISS  
+（医学知识库 + 诊断学教材）  
+↓  
+大语言模型生成诊断建议        ← Ollama + Qwen2.5  
+↓  
+诊断报告输出  
 
 ## 核心技术栈
 
-| 模块         | 技术                        |
-|--------------|-----------------------------|
-| 图像特征提取 | ResNet-50 迁移学习           |
-| 文本理解     | Clinical-BERT               |
-| 多模态融合   | Cross-Attention             |
-| 知识检索     | FAISS 向量数据库             |
-| 文本生成     | Qwen2.5-3B (Ollama本地推理) |
-| 知识库       | 诊断学教材 + 医学文献        |
-| 界面         | Gradio                      |
-| 评估指标     | ROUGE / BERTScore           |
+| 模块         | 技术                        |  
+|--------------|-----------------------------|  
+| 图像特征提取 | ResNet-50 迁移学习           |  
+| 文本理解     | Clinical-BERT               |  
+| 多模态融合   | Cross-Attention             |  
+| 知识检索     | FAISS 向量数据库             |  
+| 文本生成     | Qwen2.5-3B (Ollama本地推理) |  
+| 知识库       | 诊断学教材 + 医学文献        |  
+| 界面         | Gradio                      |  
+| 评估指标     | ROUGE / BERTScore           |  
 
 ## 创新点
 
