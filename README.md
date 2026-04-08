@@ -48,66 +48,66 @@ RAG 检索增强生成层           ← LangChain + FAISS
    保护患者隐私
 
 ## 目录结构
-skin-diagenose/
-├── data/                    # 训练数据集（HAM10000）
-├── knowledge_base/          # 医学知识文档
-├── models/                  # 所有模型权重
-│   ├── clinical_bert/
-│   ├── faiss_index/
-│   ├── resnet50_skin.pth
-│   ├── image_encoder.pth
-│   ├── text_projector.pth
-│   └── fusion.pth
-├── results/                 # 评估结果
-├── train.py                 # 图像模型训练
-├── image_encoder.py         # 图像编码器
-├── text_encoder.py          # 文本编码器
-├── fusion.py                # 多模态融合模块
-├── build_rag.py             # 构建向量数据库
-├── rag_retriever.py         # RAG 检索器
-├── add_pdf_knowledge.py     # PDF 知识库导入
-├── pipeline.py              # 完整推理流程
-├── app.py                   # Gradio 网页界面
-├── evaluate.py              # 评估脚本
-└── README.md
+skin-diagenose/  
+├── data/                    # 训练数据集（HAM10000）  
+├── knowledge_base/          # 医学知识文档  
+├── models/                  # 所有模型权重  
+│   ├── clinical_bert/  
+│   ├── faiss_index/  
+│   ├── resnet50_skin.pth  
+│   ├── image_encoder.pth  
+│   ├── text_projector.pth  
+│   └── fusion.pth  
+├── results/                 # 评估结果  
+├── train.py                 # 图像模型训练  
+├── image_encoder.py         # 图像编码器  
+├── text_encoder.py          # 文本编码器  
+├── fusion.py                # 多模态融合模块  
+├── build_rag.py             # 构建向量数据库  
+├── rag_retriever.py         # RAG 检索器  
+├── add_pdf_knowledge.py     # PDF 知识库导入  
+├── pipeline.py              # 完整推理流程  
+├── app.py                   # Gradio 网页界面  
+├── evaluate.py              # 评估脚本  
+└── README.md  
 
 ## 快速启动
 
-**1. 启动 Ollama**
-```bash
-ollama serve
-```
+**1. 启动 Ollama**  
+```bash  
+ollama serve  
+```  
 
-**2. 启动网页界面**
-```bash
-python app.py
-```
+**2. 启动网页界面**  
+```bash  
+python app.py  
+```  
 
 浏览器打开 http://127.0.0.1:7860
 
 ## 评估结果
 
-| 指标          | 得分   |
-|---------------|--------|
-| ROUGE-1       | -      |
-| ROUGE-2       | -      |
-| ROUGE-L       | -      |
-| BERTScore-F1  | -      |
+| 指标          | 得分   |  
+|---------------|--------|  
+| ROUGE-1       | -      |  
+| ROUGE-2       | -      |  
+| ROUGE-L       | -      |  
+| BERTScore-F1  | -      |  
 
 > 运行 `python evaluate.py` 后填入实际结果
 
 ## 数据集
 
-- 图像训练：[HAM10000](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000)
-  （皮肤镜图像，7类皮肤病，10015张）
-- 医学知识库：诊断学教材 + 皮肤科医学文献
+- 图像训练：[HAM10000](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000)  
+  （皮肤镜图像，7类皮肤病，10015张）  
+- 医学知识库：诊断学教材 + 皮肤科医学文献  
 
 ## 环境依赖
-```bash
-conda create -n medai python=3.10
-conda activate medai
-pip install torch torchvision transformers datasets
-pip install langchain langchain-community langchain-text-splitters
-pip install faiss-cpu sentence-transformers gradio
-pip install bert-score rouge-score pypdf ollama
-```
+```bash  
+conda create -n medai python=3.10  
+conda activate medai  
+pip install torch torchvision transformers datasets  
+pip install langchain langchain-community langchain-text-splitters  
+pip install faiss-cpu sentence-transformers gradio  
+pip install bert-score rouge-score pypdf ollama  
+```  
